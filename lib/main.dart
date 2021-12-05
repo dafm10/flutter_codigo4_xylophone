@@ -14,6 +14,20 @@ class MyApp extends StatelessWidget {
     audioCache.play("audio/note$numberNote.wav");
   }
 
+  Widget buildKey (Color colorKey, int note){
+    return Expanded(
+      child: Container(
+        color: colorKey,
+        child: TextButton(
+          onPressed: () {
+            playNote(note);
+          },
+          child: Text("Musica"),
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -22,83 +36,13 @@ class MyApp extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              Expanded(
-                child: Container(
-                  color: Colors.deepOrangeAccent,
-                  child: TextButton(
-                    onPressed: () {
-                      playNote(1);
-                    },
-                    child: Text("Nota Do"),
-                  ),
-                ),
-              ),
-              Expanded(
-                child: Container(
-                  color: Colors.black,
-                  child: TextButton(
-                    onPressed: () {
-                      playNote(2);
-                    },
-                    child: Text("Nota Re"),
-                  ),
-                ),
-              ),
-              Expanded(
-                child: Container(
-                  color: Colors.green,
-                  child: TextButton(
-                    onPressed: () {
-                      playNote(3);
-                    },
-                    child: Text("Nota Mi"),
-                  ),
-                ),
-              ),
-              Expanded(
-                child: Container(
-                  color: Colors.yellow,
-                  child: TextButton(
-                    onPressed: () {
-                      playNote(4);
-                    },
-                    child: Text("Nota Fa"),
-                  ),
-                ),
-              ),
-              Expanded(
-                child: Container(
-                  color: Colors.deepPurpleAccent,
-                  child: TextButton(
-                    onPressed: () {
-                      playNote(5);
-                    },
-                    child: Text("Nota Sol"),
-                  ),
-                ),
-              ),
-              Expanded(
-                child: Container(
-                  color: Colors.white38,
-                  child: TextButton(
-                    onPressed: () {
-                      playNote(6);
-                    },
-                    child: Text("Nota La"),
-                  ),
-                ),
-              ),
-              Expanded(
-                child: Container(
-                  color: Colors.greenAccent,
-                  child: TextButton(
-                    onPressed: () {
-                      playNote(7);
-                    },
-                    child: Text("Nota Si"),
-                  ),
-                ),
-              ),
+              buildKey(Colors.red, 1),
+              buildKey(Colors.yellow, 2),
+              buildKey(Colors.blue, 3),
+              buildKey(Colors.black12, 4),
+              buildKey(Colors.brown, 5),
+              buildKey(Colors.deepOrangeAccent, 6),
+              buildKey(Colors.white54, 7),
             ],
           ),
         ),
