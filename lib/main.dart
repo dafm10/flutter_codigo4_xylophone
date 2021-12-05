@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     audioCache.play("audio/note$numberNote.wav");
   }
 
-  Widget buildKey (Color colorKey, int note){
+  Widget buildKey (Color colorKey, int note, String mensaje){
     return Expanded(
       child: Container(
         color: colorKey,
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
           onPressed: () {
             playNote(note);
           },
-          child: Text("Musica"),
+          child: Text(mensaje),
         ),
       ),
     );
@@ -36,13 +36,13 @@ class MyApp extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              buildKey(Colors.red, 1),
-              buildKey(Colors.yellow, 2),
-              buildKey(Colors.blue, 3),
-              buildKey(Colors.black12, 4),
-              buildKey(Colors.brown, 5),
-              buildKey(Colors.deepOrangeAccent, 6),
-              buildKey(Colors.white54, 7),
+              buildKey(Colors.red, 1, 'Do'),
+              buildKey(Colors.yellow, 2, 'Re'),
+              buildKey(Colors.blue, 3, 'Mi'),
+              buildKey(Colors.black12, 4, 'Fa'),
+              buildKey(Colors.brown, 5, 'Sol'),
+              buildKey(Colors.deepOrangeAccent, 6, 'La'),
+              buildKey(Colors.white54, 7, 'Si'),
             ],
           ),
         ),
