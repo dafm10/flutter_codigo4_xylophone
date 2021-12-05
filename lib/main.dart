@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
                     onPressed: () {
                       playNote(1);
                     },
-                    child: Text("d"),
+                    child: Text("Nota Do"),
                   ),
                 ),
               ),
@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
                     onPressed: () {
                       playNote(2);
                     },
-                    child: Text("d"),
+                    child: Text("Nota Re"),
                   ),
                 ),
               ),
@@ -51,7 +51,7 @@ class MyApp extends StatelessWidget {
                     onPressed: () {
                       playNote(3);
                     },
-                    child: Text("d"),
+                    child: Text("Nota Mi"),
                   ),
                 ),
               ),
@@ -62,7 +62,29 @@ class MyApp extends StatelessWidget {
                     onPressed: () {
                       playNote(4);
                     },
-                    child: Text("d"),
+                    child: Text("Nota Fa"),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Container(
+                  color: Colors.deepPurpleAccent,
+                  child: TextButton(
+                    onPressed: () {
+                      playNote(5);
+                    },
+                    child: Text("Nota Sol"),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Container(
+                  color: Colors.white38,
+                  child: TextButton(
+                    onPressed: () {
+                      playNote(6);
+                    },
+                    child: Text("Nota La"),
                   ),
                 ),
               ),
