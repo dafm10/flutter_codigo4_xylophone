@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
 
   AudioCache audioCache = AudioCache();
 
-  playNote(int numberNote){
+  void playNote(int numberNote){
     audioCache.play("audio/note$numberNote.wav");
   }
 
@@ -85,6 +85,17 @@ class MyApp extends StatelessWidget {
                       playNote(6);
                     },
                     child: Text("Nota La"),
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Container(
+                  color: Colors.greenAccent,
+                  child: TextButton(
+                    onPressed: () {
+                      playNote(7);
+                    },
+                    child: Text("Nota Si"),
                   ),
                 ),
               ),
