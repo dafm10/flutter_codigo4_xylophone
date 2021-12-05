@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
     audioCache.play("audio/note$numberNote.wav");
   }
 
-  Widget buildKey (Color colorKey, int note, String mensaje){
+  Widget buildKey (Color colorKey, int note, String nota){
     return Expanded(
       child: Container(
         color: colorKey,
@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
           onPressed: () {
             playNote(note);
           },
-          child: Text(mensaje),
+          child: Text(nota),
         ),
       ),
     );
